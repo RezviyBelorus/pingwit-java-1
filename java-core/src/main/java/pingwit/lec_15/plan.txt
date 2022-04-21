@@ -1,0 +1,14 @@
+//////////////////////////
+/////// Lecture 15  //////
+//////////////////////////
+
+1. Структура XML документа (eXtensible Markup Language)
+2. Знакомство с XML парсерами на примере DOM, SAX, STAX
+
+Info:
+XML parsers:
+    https://habr.com/ru/post/339716/
+    https://dzone.com/articles/parsing-xml-using-dom-sax-and
+
+XSD:
+    https://habr.com/ru/post/90696/
