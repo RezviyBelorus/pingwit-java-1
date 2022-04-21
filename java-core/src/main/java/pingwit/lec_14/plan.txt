@@ -1,0 +1,37 @@
+//////////////////////////
+/////// Lecture 14  //////
+//////////////////////////
+Part 1. Maven
+Maven-Archetype-QuickStart
+1. dependencies
+2. dependencies management
+3. properties
+4. Packaging (pom, jar)
+5. Жизненный цикл Maven-проекта (clean/install, local repository)
+6. Наследование в Maven (<parent>)
+
+Part 2. Знакомство с JSON парсерами на примере jackson
+
+Info:
+https://javarush.ru/groups/posts/2523-chastjh-4osnovih-maven
+https://maven.apache.org
+https://www.baeldung.com/java-json
+https://www.baeldung.com/jackson-object-mapper-tutorial
+
+clean — удаляются все скомпилированные файлы из каталога target (место, в котором сохраняются готовые артефакты);
+validate — идет проверка, вся ли информация доступна для сборки проекта;
+compile — компилируются файлы с исходным кодом;
+test — запускаются тесты;
+package — упаковываются скомпилированные файлы (в jar, war и т.д. архив);
+verify — выполняются проверки для подтверждения готовности упакованного файла;
+install — пакет помещается в локальный репозиторий. Теперь он может использоваться другими проектами как внешняя библиотека;
+site — создается документация проекта;
+deploy — собранный архив копируется в удаленный репозиторий.
+
+<start-class>pingwit.core.lec_1.classwork.point_3.HelloWorldExample</start-class>
+
+<packaging>pom</packaging>
+<packaging>jar</packaging>
+
+<maven.compiler.source>17</maven.compiler.source>
+<maven.compiler.target>17</maven.compiler.target>

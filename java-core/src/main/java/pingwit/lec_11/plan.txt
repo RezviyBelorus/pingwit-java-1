@@ -1,0 +1,28 @@
+//////////////////////////
+/////// Lecture 11  //////
+//////////////////////////
+
+1. Collections
+2. List
+- ArrayList
+- LinkedList
+
+3. Map
+- HashMap
+- TreeMap
+
+4. Set
+- HashSet
+- TreeSet
+
+5. Comparable, Comparator
+На примере магазина
+- thenComparing
+- reversed
+
+6. Iterator
+- hasNext
+- next
+- remove
+
+7. Wildcard

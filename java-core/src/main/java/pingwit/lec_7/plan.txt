@@ -1,0 +1,19 @@
+//////////////////////////
+/////// Lecture 7  ///////
+//////////////////////////
+
+1. JVM memory, StrongReference, SoftReference, WeakReference
+2. String
+3. StringBuilder
+4. StringBuffer
+5. String -> strip, stringLeading, stripTrailing
+6. String -> repeat
+7. Работа с датами и временем:
+ - Date API (LocalDate / LocalDateTime)
+ - parse, DateTimeFormatter
+ - Between
+
+Info:
+Глава 7: https://metanit.com/java/tutorial/7.1.php
+JVM Memory: https://habr.com/ru/post/549176/
+DateTimeFormatter: https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
