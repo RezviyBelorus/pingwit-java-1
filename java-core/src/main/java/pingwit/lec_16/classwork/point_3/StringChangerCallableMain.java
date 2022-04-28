@@ -2,27 +2,25 @@ package pingwit.lec_16.classwork.point_3;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
 
-public class StringChangerMain {
+public class StringChangerCallableMain {
     public static void main(String[] args) throws InterruptedException {
         StringChanger stringChanger = new StringChanger();
 
         ExecutorService executorService = Executors.newFixedThreadPool(3);
 
-        StringChangerRunnable stringChangerRunnable = new StringChangerRunnable(stringChanger);
+        StringChangerCallable stringChangerCallable = new StringChangerCallable(stringChanger);
 
-        List<Future<?>> tasks = new ArrayList<>();
+        List<Callable<Integer>> tasks = new ArrayList<>();
 
         for (int i = 0; i < 3; i++) {
-            Future<?> submit = executorService.submit(stringChangerRunnable);
-            tasks.add(submit);
+            tasks.add(stringChangerCallable);
         }
 
-        executorService.awaitTermination(5, TimeUnit.SECONDS);
+        executorService.invokeAll(tasks);
         executorService.shutdown();
 
         System.out.println("String=" + stringChanger.getString().length());
@@ -33,20 +31,22 @@ public class StringChangerMain {
 }
 
 
-class StringChangerRunnable implements Runnable {
+class StringChangerCallable implements Callable<Integer> {
     private final StringChanger stringChanger;
 
-    public StringChangerRunnable(StringChanger stringChanger) {
+    public StringChangerCallable(StringChanger stringChanger) {
         this.stringChanger = stringChanger;
     }
 
     @Override
-    public void run() {
+    public Integer call() {
         for (int i = 0; i < 1000_0; i++) {
             stringChanger.addStringSpace();
             stringChanger.addBuilderSpace();
             stringChanger.addBufferSpace();
         }
+
+        return 1;
     }
 
 }
