@@ -1,0 +1,96 @@
+///////////////////////////
+/////// Lecture 18  ///////
+///////////////////////////
+
+======= 1. Sql, NoSql базы данных
+
+Реляционная база данных – это набор данных с предопределенными связями между ними.
+Эти данные организованны в виде набора таблиц, состоящих из столбцов и строк.
+В таблицах хранится информация об объектах, представленных в базе данных.
+В каждом столбце таблицы хранится определенный тип данных, в каждой ячейке – значение атрибута.
+Каждая строка таблицы представляет собой набор связанных значений, относящихся к одному объекту или сущности.
+Каждая строка в таблице может быть помечена уникальным идентификатором, называемым первичным ключом,
+а строки из нескольких таблиц могут быть связаны с помощью внешних ключей. К этим данным можно получить доступ многими способами,
+и при этом реорганизовывать таблицы БД не требуется.
+
+======= 2. Docker - запуск БД на базе докер, какие параметры за что отвечают
+
+Запуск контейнера с postgres: docker run --name pingwit-postgres -p 5432:5432 -e POSTGRES_PASSWORD=docker -d postgres
+Показать работающие контейнеры: docker ps
+Показать все контейнеры: docker ps -a
+Запуск остановленного контейнера: docker start [container_id]
+
+docker exec -ti [container_id] psql -U postgres
+
+======= 3. Create database, table, column + database types (bigserial, bigint, varchar=character varying)
+
+create database [db_name];
+drop database [db_name];
+
+Data types:
+Boolean: true, false, null
+Varchar(n): макс 10485760
+Integer
+Serial
+TIMESTAMP
+JSON / JSONB
+
+======= 4. PgAdmin
+
+PgAdmin download:
+https://www.pgadmin.org/download/
+
+======= 5. Alter table (rename), column (column type)
+
+alter table account
+rename to account_details;
+
+======= 6. Alter column (column type)
+
+alter table account_details
+alter column cut_surname type varchar(5);
+
+alter table account_details
+alter column age type bigint;
+
+-Update column type with truncating:
+UPDATE account_details SET cut_surname = RIGHT(cut_surname, 5);
+UPDATE account_details SET cut_surname = LEFT(cut_surname, 5);
+
+======= 7. Select, Insert, SET, Delete, Where, Like
+
+Insert:
+INSERT INTO kid (name, age) VALUES ('Petr', 2);
+
+Select:
+Select * from account;
+
+Update column value:
+update account
+set name='Batman' where name='Egorka';
+
+DELETE FROM student
+WHERE id > 7;
+
+======= 8. Primary key, foreign key
+
+-Duplicate ID fix:
+-- SELECT setval('account_id_seq', (SELECT max(id) FROM account));
+
+=======
+
+Show database:
+regular: \l
+detailed: \l+
+
+Select database:
+\c [database_name];
+example: "\c pingwit;"
+
+Show tables:
+\dt
+\dt+
+
+Info:
+https://stackoverflow.com/questions/54527999/why-we-need-a-primary-key
+https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-data-types/
