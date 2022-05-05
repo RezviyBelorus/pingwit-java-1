@@ -1,0 +1,30 @@
+///////////////////////////
+/////// Lecture 19  ///////
+///////////////////////////
+
+1. Оператор Limit
+SELECT * FROM auto_house LIMIT 2 OFFSET 2;
+
+2. Оператор Order by, asc, desc
+SELECT * FROM auto_house ORDER BY id DESC;
+
+3. Оператор INNER JOIN
+SELECT * FROM auto_house INNER JOIN fuel f on fuel_id = f.id;
+
+SELECT a.id, a.producer, a.vin, f.name as fuel_name FROM auto_house a INNER JOIN fuel f on fuel_id = f.id;
+
+4. Оператор LEFT JOIN
+SELECT a.id, a.producer, a.vin, f.name FROM fuel f LEFT JOIN auto_house a on a.fuel_id = f.id;
+
+5. Оператор RIGHT JOIN
+SELECT a.id, a.producer, a.vin, f.name FROM fuel f RIGHT JOIN auto_house a on a.fuel_id = f.id;
+
+6. Оператор Group By
+
+7. Оператор Having
+
+8. Знакомство с JDBC - при помощи Java кода работаем с базой данных
+
+JDBC
+https://habr.com/ru/post/326614/
+https://www.baeldung.com/java-jdbc
