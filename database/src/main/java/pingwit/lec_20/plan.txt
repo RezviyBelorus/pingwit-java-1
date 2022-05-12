@@ -1,0 +1,33 @@
+///////////////////////////
+/////// Lecture 20  ///////
+///////////////////////////
+
+1. Тест по базам данных + java
+2. Транзакции - Основные концепции транзакции описываются аббревиатурой ACID –
+Atomicity, Consistency, Isolation, Durability (Атомарность, Согласованность, Изолированность, Долговечность).
+3. Уровни изоляции транзакций
+Read Committed is the default isolation level in PostgreSQL
+
+READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ, SERIALIZABLE
+
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+SET GLOBAL TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
+begin transaction;
+/.../
+commit transaction;
+
+begin transaction isolation level READ UNCOMMITTED;
+/.../
+commit transaction;
+
+4. LinkedIn
+
+Info:
+
+ACID
+https://habr.com/ru/post/555920/
+
+Transactions
+https://habr.com/ru/post/469415/
+https://habr.com/ru/post/662407/
