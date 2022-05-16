@@ -1,0 +1,15 @@
+///////////////////////////
+/////// Lecture 21  ///////
+///////////////////////////
+*** Знакомство со Spring Framework
+1. Что такое Spring, SpringBoot
+2. Многофазный конструктор. Как создаются бины. PostConstruct
+3. Виды Spring конфигураций.
+XML, JavaConfig, AnnotationConfig (Repository, Service, Component)
+4. Controller, RestController
+5. PathVariable, RequestParam, RequestBody, ResponseBody
+6. Postman
+GET, POST
+
+Info:
+https://habr.com/ru/post/50147/
