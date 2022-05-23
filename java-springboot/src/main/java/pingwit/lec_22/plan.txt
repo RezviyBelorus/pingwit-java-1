@@ -1,0 +1,9 @@
+///////////////////////////
+/////// Lecture 22  ///////
+///////////////////////////
+1. Repository, Service, Component,
+2. Spring profiles - application.yml, application.properties, application-default.yml
+3. Configuration properties, @Value
+4. Ссылка на другие проперти внутри конфигурации
+5. Property Validation
+@Length, @Min, @Max
