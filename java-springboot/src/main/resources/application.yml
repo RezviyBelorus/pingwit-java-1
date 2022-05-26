@@ -3,6 +3,10 @@ pingwit.server:
   port: 8080
 
 spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pingwit-java-1
+    username: postgres
+    password: docker
   mail:
     host: smtp.gmail.com
     port: 587

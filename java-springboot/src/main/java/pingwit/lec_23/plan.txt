@@ -1,0 +1,8 @@
+///////////////////////////
+/////// Lecture 23  ///////
+///////////////////////////
+*** Spring работа с базами данных
+1. Hibernate - что это
+2. Создание класса entity (@Entity, @id, @Table)
+3. Spring Data, paging
+4. Транзакции (@Transactional)
