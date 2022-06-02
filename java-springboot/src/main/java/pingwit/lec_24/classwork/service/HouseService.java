@@ -26,9 +26,15 @@ public class HouseService {
 
         House savedHouse = houseRepository.save(house);
 
-        throwException();
+//        throwException();
 
         return savedHouse.getId();
+    }
+
+    public HouseDto findById(Long id) {
+        return houseRepository.findById(id)
+            .map(houseConverter::toFront)
+            .orElse(null);
     }
 
     public List<HouseDto> findAllByHouseType(HouseType houseType) {

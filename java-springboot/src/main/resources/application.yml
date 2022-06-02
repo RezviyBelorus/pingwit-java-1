@@ -4,7 +4,7 @@ pingwit.server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/pingwit-java-1
+    url: jdbc:postgresql://localhost:5432/pingwit-java-1-1
     username: postgres
     password: docker
   mail:

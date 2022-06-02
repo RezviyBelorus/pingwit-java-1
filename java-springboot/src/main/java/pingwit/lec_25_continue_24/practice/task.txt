@@ -1,0 +1,41 @@
+***Task 1***
+Дано:
+
+public class UserDto {
+    private Long id;
+    private String login;
+    private String password;
+    private AvatarDto avatar;
+    private List<SubscriptionDto> subscriptions;
+    private List<CommentDto> comments;
+}
+
+public class SubscriptionDto {
+    private long id;
+    private Type type;
+}
+
+public enum Type {
+    MONTH,
+    YEAR
+}
+
+public class AvatarDto {
+    private long id;
+    private String url;
+}
+
+public class CommentDto {
+    private long id;
+    private String text;
+}
+
+Описание:
+У одного пользователя может быть несколько подписок, а одна подписка может принадлежать нескольким пользователям
+У одного пользователя может быть несколько комментариев, а один комментарий может принадлежать только одному пользователю
+
+Задание:
+Подготовить json для сохранения пользователя (у пользователя должен быть аватар, несколько подписок и комментариев).
+При помощи postman сохранить пользователя в базу данных.
+При помощи postman получить всех пользователей включая данные об аватаре и т.д.
+При помощи postman получить одного пользователя по id

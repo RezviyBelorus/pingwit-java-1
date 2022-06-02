@@ -28,6 +28,11 @@ public class HouseController {
         return houseService.save(dto);
     }
 
+    @GetMapping("/{id}")
+    public HouseDto findAllByHouseType(@PathVariable Long id) {
+        return houseService.findById(id);
+    }
+
     @GetMapping("/type/{houseType}")
     public List<HouseDto> findAllByHouseType(@PathVariable HouseType houseType) {
         return houseService.findAllByHouseType(houseType);

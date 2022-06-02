@@ -1,0 +1,6 @@
+///////////////////////////
+/////// Lecture 25  ///////
+///////////////////////////
+1. Связи между таблицами - OneToOne, OneToMany, ManyToOne, ManyToMany
+todo
+2. Lazy loading - FetchType.LAZY, FetchType.EAGER
