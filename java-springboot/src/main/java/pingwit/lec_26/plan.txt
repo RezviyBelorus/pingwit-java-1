@@ -4,4 +4,4 @@
 1. Lazy loading - FetchType.LAZY, FetchType.EAGER
 2. Hibernate - show SQL
 3. ControllerAdvice
-4. Узнать про апдейт энтити без удаления других полей
+4. Про апдейт энтити без удаления других полей
