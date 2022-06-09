@@ -1,0 +1,6 @@
+///////////////////////////
+/////// Lecture 27  ///////
+///////////////////////////
+1. Modifying query
+2. Join fetch JPQL query - LEFT JOIN FETCH(=eager) vs LEFT JOIN (=lazy)
+3. Работа с интерсепторами на примере хэдеров в запросе (опционально)

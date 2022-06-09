@@ -42,6 +42,10 @@ public class MilkService {
         return entity.getId();
     }
 
+    @Transactional
+    public void setFatPercentAndVolume(Double fatPercent, Double volume, Long id) {
+        milkRepository.setFatPercentAndVolume(fatPercent, volume, id);
+    }
 
     public MilkDto getById(Long id) {
         return milkRepository.findById(id)

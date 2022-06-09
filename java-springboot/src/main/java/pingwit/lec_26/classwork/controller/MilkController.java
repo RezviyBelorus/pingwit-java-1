@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import pingwit.lec_26.classwork.dto.MilkDto;
 import pingwit.lec_26.classwork.service.MilkService;
@@ -30,6 +31,11 @@ public class MilkController {
     @PutMapping("/update")
     public Long update(@RequestBody MilkDto dto) {
         return milkService.update(dto);
+    }
+
+    @PutMapping("/update/{id}")
+    public void setFatPercentAndVolume(@RequestParam Double fatPercent, @RequestParam Double volume, @PathVariable Long id) {
+        milkService.setFatPercentAndVolume(fatPercent, volume, id);
     }
 
     @GetMapping("/id/{id}")
