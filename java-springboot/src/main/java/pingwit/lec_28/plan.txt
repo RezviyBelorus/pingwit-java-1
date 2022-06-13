@@ -1,0 +1,8 @@
+///////////////////////////
+/////// Lecture 28  ///////
+///////////////////////////
+1. Liquibase - что это
+2. Liquibase - добавление зависимостей в проект
+3. Liquibase - мавен плагин, mvn liquibase:generateChangeLog
+4. Liquibase - импорт из csv файла
+5. Liquibase - insert из sql файла
