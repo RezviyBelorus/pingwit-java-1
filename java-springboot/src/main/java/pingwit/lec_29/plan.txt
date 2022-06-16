@@ -1,0 +1,7 @@
+///////////////////////////
+/////// Lecture 29  ///////
+///////////////////////////
+*** Тестирование ***
+1. JUnit5
+2. Mockito - mock(), @InjectMocks
+3. Integration Test (SpringBootTest, WebMvcMock, ObjectMapper, TestContainers?)
