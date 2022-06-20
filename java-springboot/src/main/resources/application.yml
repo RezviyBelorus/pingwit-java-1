@@ -2,6 +2,14 @@ pingwit.server:
   name: "Egor Egorych"
   port: 8080
 
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+
+#management.endpoints.web.exposure.include: health, liquibase, info, beans, loggers
+#management.endpoints.web.exposure.include: "*"
+
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/pingwit-java-1-1
@@ -16,7 +24,7 @@ spring:
     host: smtp.gmail.com
     port: 587
     username: pingwittest@gmail.com
-    password: pingwittest2022
+    password: asdfamebupsmvufx
     properties.mail.smtp.auth: true
     properties.mail.smtp.starttls.enable: true
 
